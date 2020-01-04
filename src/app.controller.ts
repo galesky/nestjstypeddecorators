@@ -31,7 +31,7 @@ export class AppController {
 
   @Post('scenario3')
   scenario3(
-    @UserArray(['John Doe', 200, new ValidationPipe()]) user: UserInterface,
+    @UserArray(['John Doe', {}]) user: UserInterface,
   ) {
     return user;
   }

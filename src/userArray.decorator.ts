@@ -1,5 +1,5 @@
-import { createGenericParamDecorator, PipeTransform } from '@nestjs/common';
+import { createParamDecorator, PipeTransform } from '@nestjs/common';
 
-export const UserArray = createGenericParamDecorator<[[string, number, PipeTransform]]>((req, data) => {
+export const UserArray = createParamDecorator<Array<string | object>>((req, data) => {
   return req.body;
 });
